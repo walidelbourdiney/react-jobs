@@ -1,11 +1,18 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [showJobs, setShowJobs] = useState(false);
+
   return (
     <>
-      <h1 className="text-3xl font-bold  bg-amber-200">
-        Hello Vite + React!!!
-      </h1>
+      {showJobs ? <div>List of Jobs</div> : <div>No Jobs Available</div>}
+      <button
+        onClick={() => setShowJobs(!showJobs)}
+        className=" bg-amber-200 border-2 rounded-2xl p-2"
+      >
+        {showJobs ? "Hide Jobs" : "Show Jobs"}
+      </button>
     </>
   );
 }

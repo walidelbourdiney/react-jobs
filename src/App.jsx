@@ -13,6 +13,11 @@ function App() {
       >
         {showJobs ? "Hide Jobs" : "Show Jobs"}
       </button>
+      <h1>Jobs</h1>
+      <div>
+        <input type="text" placeholder="Search" />
+      </div>  
+      {/* test */}
     </>
   );
 }
